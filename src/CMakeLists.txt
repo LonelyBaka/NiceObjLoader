@@ -6,6 +6,7 @@ add_executable(loader ${source_files} ${hdrs})
 
 target_link_libraries(loader
                         glfw 
-                        libglew_static						
+                        libglew_static
+                        assimp						
                         ${OPENGL_LIBRARIES}
 )

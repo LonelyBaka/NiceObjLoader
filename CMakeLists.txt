@@ -44,6 +44,7 @@ find_package(OpenGL REQUIRED)
 include_directories("${CMAKE_SOURCE_DIR}/lib/glfw/include")
 include_directories("${CMAKE_SOURCE_DIR}/lib/glew/include")
 include_directories("${CMAKE_SOURCE_DIR}/lib/glm")
+include_directories("${CMAKE_SOURCE_DIR}/lib/assimp/include")
 
 include_directories("${CMAKE_SOURCE_DIR}/lib")
 include_directories("${CMAKE_SOURCE_DIR}/include")

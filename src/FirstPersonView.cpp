@@ -9,7 +9,7 @@ static GLfloat pitch;
 
 FirstPersonView::FirstPersonView(const std::uint32_t& screenWidth, const std::uint32_t& screenHeight, 
                                  const std::string winName, bool _visible): WindowManager(screenWidth, screenHeight, winName, _visible) {
-    Utils::initCamera(45.0f, screenWidth, screenHeight, 0.1f, 10000.0f, glm::vec3(0.0f, 0.0f, 0.0f), 
+    Utils::initCamera(45.0f, screenWidth, screenHeight, 0.1f, 1000.0f, glm::vec3(0.0f, 3.0f, 5.0f), 
                         glm::vec3(.0f, 0.0f, -1.0f), glm::vec3(0.0f, 1.0f, 0.0f));
     
     lastX = screenWidth/2;
@@ -42,7 +42,7 @@ void FirstPersonView::cameraMovement(float dt) {
 	{
 		prevCamPos -= glm::normalize(glm::cross(Utils::getCamera()->getCameraFront(), Utils::getCamera()->getCameraUp())) *cameraSpeed;
 	}
-	prevCamPos[1] = 0.0f;
+	prevCamPos[1] = 3.0f;
 	Utils::getCamera()->moveCamera(prevCamPos);
 }
 
