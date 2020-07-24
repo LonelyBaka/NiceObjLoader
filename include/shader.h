@@ -1,5 +1,4 @@
-#ifndef SHADER_H
-#define SHADER_H
+#pragma once
 
 #include <GL/glew.h>
 #include <glm/glm.hpp>
@@ -187,4 +186,3 @@ private:
         }
     }
 };
-#endif

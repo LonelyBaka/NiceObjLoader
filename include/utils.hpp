@@ -1,5 +1,4 @@
-#ifndef UTILS_HPP
-#define UTILS_HPP
+#pragma once
 
 #include <Camera.hpp>
 #include <string>
@@ -14,5 +13,3 @@ class Utils {
             GLfloat farPlane, glm::vec3 camPos, glm::vec3 camFront, glm::vec3 camUp);
         static Camera* getCamera() noexcept {return camera;}
 };
-
-#endif

@@ -4,5 +4,5 @@
 
 class TTable : public TObject {
 public:
-  explicit TTable(const std::string& _name = "");
+  explicit TTable(const std::string _name = "");
 };

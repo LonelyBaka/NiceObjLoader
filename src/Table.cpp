@@ -1,6 +1,6 @@
 #include "Table.hpp"
 
-TTable::TTable(const std::string& _name = "") : TObject(_name) {
+TTable::TTable(const std::string _name) : TObject(_name) {
   properties.insert(
       {std::string("Coordinate"),
        new TProperties(

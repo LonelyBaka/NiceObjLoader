@@ -1,5 +1,5 @@
 ﻿#include <stdexcept>
-#include "BasicExamples/Properties.h"
+#include "Properties.hpp"
 
 TProperties::TProperties(std::string _name) : name(_name),
     isString(false), stringValue(""), isObserved(false) {}

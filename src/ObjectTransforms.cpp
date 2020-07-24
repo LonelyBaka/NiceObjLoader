@@ -1,10 +1,8 @@
-#pragma once
-
 #include "ObjectTransforms.hpp"
 
-TObjectTransforms::TObjectTransforms(TObject &obj) {
-  pos = obj.GetProperty("Coordinate");
-  scale = obj.GetProperty("Dimensions");
+TObjectTransforms::TObjectTransforms(TObject *obj) {
+  pos = obj->GetProperty("Coordinate");
+  scale = obj->GetProperty("Dimensions");
 }
 
 glm::vec3 TObjectTransforms::getPos() {

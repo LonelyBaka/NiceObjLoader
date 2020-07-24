@@ -4,8 +4,8 @@
 #include "Object.hpp"
 
 class IGraphicPresenter {
-  virtual void addTObject(const TObject& obj) {}
-  virtual void deleteTObject(const TObject& obj) {}
+  virtual void addTObject(TObject* obj) {}
+  virtual void deleteTObject(const TObject* obj) {}
 };
 
 class TGraphicPresenter : public IGraphicPresenter {
@@ -15,6 +15,6 @@ private:
 public:
   TGraphicPresenter() : _manager(nullptr) {}
   void setGraphicManager(TGraphicManager *manager) { _manager = manager; }
-  virtual void addTObject(const TObject& obj) override { _manager->addNewObject(obj); }
-  virtual void deleteTObject(const TObject& obj) override {}
+  virtual void addTObject(TObject* obj) override { _manager->addNewObject(obj); }
+  virtual void deleteTObject(const TObject* obj) override {}
 };

@@ -12,23 +12,23 @@
 #include <FirstPersonView.hpp>
 #include <iostream>
 #include <mesh.h>
-#include <model.h>
+// #include <model.h>
 #include <shader.h>
 #include <stb_image.h>
 #include <utils.hpp>
 
-#include <Object.hpp>
-#include <GObject.hpp>
-
+#include "Object.hpp"
+#include "GObject.hpp"
+#include "ObjectTransforms.hpp"
 class TGraphicManager {
 private:
   WindowManager *_window;
   Model _tableModel;
-  std::vector<TGObject> graphicObjects;
+  std::vector<TGObject*> graphicObjects;
   Shader _shader;
 
 public:
   TGraphicManager();
-  void addNewObject(const TObject &obj);
+  void addNewObject(TObject *obj);
   void startDraw();
 };

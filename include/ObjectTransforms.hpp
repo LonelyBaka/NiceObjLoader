@@ -14,7 +14,7 @@ private:
   IProperties* scale;
 
 public:
-  TObjectTransforms(цTObject &obj);
+  TObjectTransforms(TObject *obj);
   glm::vec3 getPos();
   glm::vec3 getScale();
 };
