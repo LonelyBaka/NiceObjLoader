@@ -5,24 +5,25 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 class Camera {
-    public:
-        Camera(GLfloat FOV, GLfloat width, GLfloat height, GLfloat nearPlane,
-            GLfloat farPlane, glm::vec3 camPos, glm::vec3 camFront, glm::vec3 camUp);
-        ~Camera();
+  public:
+    Camera(GLfloat FOV, GLfloat width, GLfloat height, GLfloat nearPlane,
+           GLfloat farPlane, glm::vec3 camPos, glm::vec3 camFront,
+           glm::vec3 camUp);
+    ~Camera();
 
-        glm::mat4 getViewMatrix();
-        glm::mat4 getProjectionMatrix();
-        glm::vec3 getCameraPosition();
-        glm::vec3 getCameraFront();
-        glm::vec3 getCameraUp();
-        void moveCamera(glm::vec3 camPos);
-        void rotateCamera(glm::vec3 camFront);
-        void rotateUpCamera(glm::vec3 camUp);
+    glm::mat4 getViewMatrix();
+    glm::mat4 getProjectionMatrix();
+    glm::vec3 getCameraPosition();
+    glm::vec3 getCameraFront();
+    glm::vec3 getCameraUp();
+    void moveCamera(glm::vec3 camPos);
+    void rotateCamera(glm::vec3 camFront);
+    void rotateUpCamera(glm::vec3 camUp);
 
-    private:
-        glm::mat4 viewMatrix;
-        glm::mat4 projectionMatrix;
-        glm::vec3 cameraPos;
-        glm::vec3 cameraFront;
-        glm::vec3 cameraUp;
+  private:
+    glm::mat4 viewMatrix;
+    glm::mat4 projectionMatrix;
+    glm::vec3 cameraPos;
+    glm::vec3 cameraFront;
+    glm::vec3 cameraUp;
 };

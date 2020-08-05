@@ -6,12 +6,15 @@
 #include "Object.hpp"
 
 class TWorkManager {
-private:
-  std::vector<TObject *> _objects;
-  TGraphicPresenter *_presenter;
+  private:
+    std::vector<TObject *> _objects;
+    IGraphicPresenter *_presenter;
+    bool _stopWork;
 
-public:
-  explicit TWorkManager(TGraphicPresenter *presenter);
-  void Start();
-  void sendObjects();
+  public:
+    explicit TWorkManager(IGraphicPresenter *presenter);
+    void Start();
+    void sendObjects();
+    void stopWork() { _stopWork = true; }
 };
+    

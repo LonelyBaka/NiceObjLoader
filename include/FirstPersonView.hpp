@@ -1,6 +1,7 @@
 #pragma once
 
 #include "WindowManager.hpp"
+#include <string>
 
 class FirstPersonView : public WindowManager {
 public:

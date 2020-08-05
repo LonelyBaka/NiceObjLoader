@@ -9,12 +9,12 @@ using namespace glm;
 #include "Properties.hpp"
 
 class TObjectTransforms {
-private:
-  IProperties* pos;
-  IProperties* scale;
+  private:
+    IProperties *pos;
+    IProperties *scale;
 
-public:
-  TObjectTransforms(TObject *obj);
-  glm::vec3 getPos();
-  glm::vec3 getScale();
+  public:
+    TObjectTransforms(TObject *obj);
+    glm::vec3 getPos();
+    glm::vec3 getScale();
 };
