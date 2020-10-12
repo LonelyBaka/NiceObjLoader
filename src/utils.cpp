@@ -26,6 +26,6 @@ std::string Utils::getCWD() {
 std::string Utils::getPath(const std::string path) {
     auto cwd = Utils::getCWD();
     std::transform(cwd.begin(), cwd.end(), cwd.begin(), toupper);
-    auto i = cwd.find("GLSAMPLE");
-    return getCWD().substr(0,i+8) + path;
+    auto i = cwd.find("NICEOBJLOADER");
+    return getCWD().substr(0,i+13) + path;
 }
